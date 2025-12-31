@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy Birthday Sindhu</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- full-screen canvas for background visuals -->
+  <canvas id="backgroundCanvas"></canvas>
+
+  <!-- page container with scroll snapping -->
+  <div id="pages" class="pages">
+
+    <!-- PAGE 1: Intro -->
+    <section id="page-intro" class="page intro">
+      <main class="intro-layout">
+        <section class="left-col">
+          <div class="heading-area">
+            <h1 class="line1">Happy Birthdayyyyy</h1>
+            <h1 class="line2">Sindhu</h1>
+          </div>
+        </section>
+
+        <aside class="right-col">
+          <div id="collagePlaceholder" class="collage-placeholder">
+            <img src="./images/collage.jpg" alt="Sindhu Collage">
+          </div>
+        </aside>
+      </main>
+
+    </section>
+
+    <!-- PAGE 2: Letter (scroll that unrolls) -->
+    <section id="page-letter" class="page letter-screen">
+      <div class="letter-wrap">
+        <div id="scrollWrap" class="scroll-wrap">
+          <div id="scrollSeal" class="scroll-seal">
+            <div class="seal-dot"></div>
+          </div>
+
+          <button id="openBtn" class="envelope-btn">Click Me</button>
+        </div>
+
+        <!-- The letter image (portrait handwritten) -->
+        <div class="letter-frame">
+          <img id="letterImage" src="./images/letter.jpg" alt="Letter (handwritten)">
+        </div>
+
+        <!-- Close button (appears when opened) -->
+        <button id="closeBtn" class="close-btn">Close</button>
+      </div>
+    </section>
+
+    <!-- PAGE 3: Video -->
+    <section id="page-video" class="page video-screen">
+      <div class="video-container">
+        <video id="mainVideo" class="main-video" controls autoplay muted loop>
+          <source src="./videos/sindhu-video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
+
+    <!-- PAGE 4: Photo Grid Stories -->
+    <section id="page-grid" class="page grid-screen">
+      <div class="grid-container">
+        <h1 class="grid-title">Love, in pictures</h1>
+        <div class="photo-grid">
+          <!-- Grid items will be dynamically generated -->
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Letter Popup Modal -->
+  <div id="letterModal" class="letter-modal">
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal-content">
+      <button id="modalCloseBtn" class="modal-close-btn">✕</button>
+      <div class="modal-letter-container">
+        <img id="modalLetterImage" src="./images/letter.jpg" alt="Handwritten Letter">
+      </div>
+    </div>
+  </div>
+
+  <!-- Instagram Story Modal -->
+  <div id="storyModal" class="story-modal">
+    <div class="story-overlay" id="storyOverlay"></div>
+    <div class="story-content">
+      <button id="storyCloseBtn" class="story-close-btn">✕</button>
+      <div class="story-container">
+        <div class="story-image-container">
+          <img id="storyImage" class="story-image" src="" alt="Story">
+        </div>
+        <div class="story-footer">
+          <button id="storyBackBtn" class="story-back-btn">Back</button>
+          <div class="music-player">
+            <button id="musicToggle" class="music-toggle">🎵</button>
+            <div class="music-info">
+              <div class="music-controls">
+                <button id="playPause" class="music-control">⏸</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js" defer></script>
+</body>
+
+</html>

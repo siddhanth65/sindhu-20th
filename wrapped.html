@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sindhu Wrapped — 2025</title>
+    <link rel="stylesheet" href="wrapped.css">
+</head>
+
+<body>
+    <!-- Background layers for parallax -->
+    <div class="background-layers">
+        <div class="layer stars-layer" data-depth="0.2"></div>
+        <div class="layer aurora-layer" data-depth="0.4"></div>
+        <div class="layer clouds-layer" data-depth="0.6"></div>
+        <canvas id="particleCanvas" class="particle-layer"></canvas>
+    </div>
+
+    <!-- Main content -->
+    <main class="wrapped-container">
+        <!-- Header -->
+        <header class="wrapped-header">
+            <h1 class="main-title">Sindhu Wrapped — 2025</h1>
+            <p class="subtitle">your year, in little beautiful truths</p>
+        </header>
+
+        <!-- Audio controls -->
+        <div class="audio-controls">
+            <button id="audioToggle" class="audio-btn" aria-label="Toggle background music">
+                <span class="audio-icon">🎵</span>
+            </button>
+        </div>
+
+        <!-- Carousel container -->
+        <div class="carousel-section">
+            <div class="carousel-container">
+                <!-- Navigation arrows -->
+                <button class="carousel-nav prev" aria-label="Previous card">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <button class="carousel-nav next" aria-label="Next card">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+
+                <!-- Cards track -->
+                <div class="cards-track">
+                    <!-- Cards will be dynamically generated -->
+                </div>
+            </div>
+
+            <!-- Pagination dots -->
+            <div class="pagination-dots">
+                <!-- Dots will be dynamically generated -->
+            </div>
+        </div>
+
+        <!-- Easter egg overlay -->
+        <div id="easterEgg" class="easter-egg-overlay">
+            <div class="easter-egg-content">
+                <button class="easter-egg-close" aria-label="Close">✕</button>
+                <div class="easter-egg-text">
+                    <!-- Inside joke content -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Background audio (muted by default) -->
+    <audio id="backgroundAudio" loop muted>
+        <source src="audio/wrapped-ambience.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="wrapped-data.js"></script>
+    <script src="wrapped.js"></script>
+</body>
+
+</html>
